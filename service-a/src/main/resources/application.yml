@@ -1,0 +1,16 @@
+server:
+  port: 7000
+
+spring:
+  application:
+    name: service-a
+#service-b:
+#  ribbon:
+#    listOfServers: http://localhost:7005, http://localhost:7006
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7050/eureka/

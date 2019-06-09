@@ -1,0 +1,24 @@
+server:
+  port: 7060
+
+spring:
+  application:
+    name: api-gateway
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7050/eureka/
+
+zuul:
+  ignored-services: "*"
+  routes:
+    service-a:
+      path: /api/service-a/*
+      serviceId: service-a
+#      url: http://localhost:7000/
+
+#Ribbon is auto integrated with Zuul
+#  ribbon.eureka.enabled=false

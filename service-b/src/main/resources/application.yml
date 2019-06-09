@@ -1,0 +1,15 @@
+server:
+  port: 7005
+
+spring:
+  application:
+    name: service-b
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:7050/eureka/
+  instance:
+    appname: service-b
