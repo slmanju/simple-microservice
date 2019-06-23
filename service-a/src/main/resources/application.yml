@@ -4,6 +4,11 @@ server:
 spring:
   application:
     name: service-a
+  zipkin:
+    baseUrl: http://localhost:9411/
+  sleuth:
+    sampler:
+      probability: 1.0
 #service-b:
 #  ribbon:
 #    listOfServers: http://localhost:7005, http://localhost:7006
